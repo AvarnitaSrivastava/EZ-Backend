@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "195bd380-8cf6-4543-bf33-b23b67528401",
+		"name": "Secure File Sharing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43865135"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/ops/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"email\": \"ops@example.com\",\n    \"password\": \"opspassword\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/ops/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ops",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ops/upload-file",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJvcHNAZXhhbXBsZS5jb20iLCJyb2xlIjoib3BzIiwiZXhwIjoxNzUxNTMzNzE4fQ.QIYeJq4YdFaB0H8vfnGm4FuQbLKWQwhfzf7kO_wnuUs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1f0576c9-a3fe-4ad0-aaed-c64d1649c7fb"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/ops/upload-file",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ops",
+						"upload-file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/client/signup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n       \"email\": \"client4@example.com\",\n       \"password\": \"client4password\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/client/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"client",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/client/verify-email?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbGllbnQ0QGV4YW1wbGUuY29tIiwicm9sZSI6ImNsaWVudCIsImV4cCI6MTc1MTUzMzMzM30.A8W3KELfqmWV9a-rcaTZ0tNbTZCdBakHsVjrdJhQS6k",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/client/verify-email?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbGllbnQ0QGV4YW1wbGUuY29tIiwicm9sZSI6ImNsaWVudCIsImV4cCI6MTc1MTUzMzMzM30.A8W3KELfqmWV9a-rcaTZ0tNbTZCdBakHsVjrdJhQS6k",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"client",
+						"verify-email"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbGllbnQ0QGV4YW1wbGUuY29tIiwicm9sZSI6ImNsaWVudCIsImV4cCI6MTc1MTUzMzMzM30.A8W3KELfqmWV9a-rcaTZ0tNbTZCdBakHsVjrdJhQS6k"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/client/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbGllbnQzQGV4YW1wbGUuY29tIiwicm9sZSI6ImNsaWVudCIsImV4cCI6MTc1MTUyOTE0NH0.YGzX2SZqDb13EGK0zCXDBS7f8kk2rdnQz3j-z96pe70",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "     {\n       \"email\": \"client4@example.com\",\n       \"password\": \"client4password\"\n     }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/client/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"client",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/client/files",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbGllbnQ0QGV4YW1wbGUuY29tIiwicm9sZSI6ImNsaWVudCIsImV4cCI6MTc1MTUzMzM3N30.xliC4KrG4nXgYTRsn4sHtUJQOobVWi90OBSrgm9-x4g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/client/files",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"client",
+						"files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/client/download-file/3",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbGllbnQ0QGV4YW1wbGUuY29tIiwicm9sZSI6ImNsaWVudCIsImV4cCI6MTc1MTUzMzM3N30.xliC4KrG4nXgYTRsn4sHtUJQOobVWi90OBSrgm9-x4g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/client/download-file/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"client",
+						"download-file",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/client/download/pXObu6W5M1fQq1VyPplnSi2DH5xPGli2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbGllbnQ0QGV4YW1wbGUuY29tIiwicm9sZSI6ImNsaWVudCIsImV4cCI6MTc1MTUzMzM3N30.xliC4KrG4nXgYTRsn4sHtUJQOobVWi90OBSrgm9-x4g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/client/download/pXObu6W5M1fQq1VyPplnSi2DH5xPGli2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"client",
+						"download",
+						"pXObu6W5M1fQq1VyPplnSi2DH5xPGli2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
