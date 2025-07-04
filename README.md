@@ -30,7 +30,6 @@ A modern, secure file-sharing system built with FastAPI and React, supporting tw
 ## Tech Stack
 
 - **Backend:** FastAPI, SQLAlchemy, SQLite (dev) / PostgreSQL (prod)
-- **Frontend:** React (Vite), Material-UI
 - **Auth:** JWT (python-jose)
 - **Testing:** Pytest, FastAPI TestClient
 - **Containerization:** Docker
