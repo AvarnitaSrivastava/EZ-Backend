@@ -52,24 +52,13 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. Frontend Setup
-```bash
-cd frontend
-npm install
-```
 
-### 4. Environment Variables
+### 3. Environment Variables
 - Set your DB URL, JWT secret, etc. in environment variables or a `.env` file.
 
-### 5. Run the Backend
+### 4. Run the Backend
 ```bash
 uvicorn app.main:app --reload
-```
-
-### 6. Run the Frontend
-```bash
-cd frontend
-npm run dev
 ```
 
 ---
